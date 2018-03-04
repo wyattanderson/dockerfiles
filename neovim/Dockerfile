@@ -56,4 +56,5 @@ RUN make \
 
 WORKDIR /home/$USER
 
-ENTRYPOINT ["nvim"]
+COPY docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
